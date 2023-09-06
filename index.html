@@ -1,0 +1,106 @@
+<html>
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="loader" id="symbol_loader"></div>
+<div class="loader" id="route_loader"></div>
+<div class="loader" id="stacked_loader"></div>
+<div class="loader" id="node_loader"></div>
+<div class="loader" id="heat_loader"></div>
+<div class="loader" id="card_heat_loader"></div>
+<div class="container">
+    <div class="header">
+        <h1 class="text-center">Vast 2021 MC-2</h1>
+        <h3 class="text-center">Himanshu Sharma - hsharm39@asu.edu, Deval Jayesh Pandya - djpandya@asu.edu, Chen Ni Lin - clin250@asu.edu</h3>
+        <h3 class="text-center">Jiahui Li - jiahui12@asu.edu, Malin Tan - mtan12@asu.edu, Pengfei Zhang - pzhang84@asu.edu</h3>
+    </div>
+    <hr>
+    <div class="control-panel">
+        <div>
+            <label>SELECT DATE: </label>
+            <input type="text" id="dates" value="01/01/2018 - 01/15/2018"/>
+        </div>
+        <div>
+            <label>SELECT LOCATION: </label>
+            <select id="location" class="select" multiple="multiple"></select>
+        </div>
+        <div>
+            <label>SELECT EMPLOYEE: </label>
+            <select id="people" class="select" multiple="multiple"></select>
+        </div>
+    </div>
+    <hr>
+    <div class="charts">
+        <div class="symbol_map">
+            <table class="symbol_map_main_table">
+                <tr>
+                    <td>
+                        <div id="symbol_map">
+                        </div>
+                    </td>
+                    <td class="table-wrapper-scroll-y custom-scrollbar">
+                        <table id="symbol_map_data_table" class="table table-striped" style="width: 100%;">
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="route_map">
+            <div id="route_map">
+
+            </div>
+        </div>
+        <div class="stack_chart">
+            <div id="stack_chart">
+
+            </div>
+        </div>
+        <div class="node_chart">
+            <div id="node_chart">
+
+            </div>
+        </div>
+        <div class="card_heat_map">
+            <div id="card_heat_map">
+
+            </div>
+        </div>
+        <div class="heat_map">
+            <div id="heat_map">
+
+            </div>
+        </div>
+        <div class="bubble_chart">
+            <div id="bubble_chart">
+
+            </div>
+        </div>
+    </div>
+    <div class="people_info">
+        <div class="people_info_content" id="color_metadata">
+        </div>
+    </div>
+</div>
+</body>
+</html>
